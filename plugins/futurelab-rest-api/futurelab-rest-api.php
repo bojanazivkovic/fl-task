@@ -27,8 +27,8 @@ function get_centres()
         $data[$i]['id'] = $post->ID;
         $data[$i]['title'] = $post->post_title;
         $data[$i]['slug'] = $post->post_name;
-        $i++;
         $data[$i] = get_post_meta($post->ID);
+	$i++;
     }
     return $data;
 }
